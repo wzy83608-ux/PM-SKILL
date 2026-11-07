@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Agents"
+  short_description: "Specialized UI, UX, brand, research, and visual design guidance"
+  default_prompt: "Use -agents to help with this design task."

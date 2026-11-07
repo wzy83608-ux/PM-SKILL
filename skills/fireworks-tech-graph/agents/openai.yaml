@@ -1,0 +1,4 @@
+interface:
+  display_name: "流程图与技术架构图生成工具"
+  short_description: "生成流程图、架构图、时序图、数据流图和技术动画"
+  default_prompt: "使用 $fireworks-tech-graph 将系统或工作流描述生成经过几何校验的流程图或技术架构图，并按需导出 SVG、PNG、HTML 或 GIF。"

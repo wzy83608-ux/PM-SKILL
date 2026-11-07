@@ -1,0 +1,4 @@
+interface:
+  display_name: "通用产品功能验收"
+  short_description: "跨系统执行细致功能验收、多角色流程与数据核对，输出可追溯图文报告"
+  default_prompt: "使用 $product-acceptance 对指定系统执行产品功能验收，核对各角色完整流程和数据，异常留图，并生成图文 HTML 验收报告。"
