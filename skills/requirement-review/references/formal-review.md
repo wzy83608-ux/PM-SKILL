@@ -39,6 +39,10 @@ Evidence Strength 只表示问题定义的证据质量，不代表 Priority：
 
 实用性与用户价值分别输出 `HIGH/MEDIUM/LOW/UNKNOWN`，并附适用角色、场景、证据和关键假设。`UNKNOWN` 不自动阻塞；只有缺失信息可能改变问题是否成立、范围或价值判断时，才形成 Blocking Finding。该判断不代表业务价值、ROI 或 Priority。
 
+## 关键假设核验
+
+按 [assumption-review.md](assumption-review.md) 检查影响问题成立、范围、实用性或用户价值的关键假设。该检查细化现有证据、逻辑与信息缺口评审，不新增独立评分、状态或审批流程。核验结果纳入 RR；形成 Finding 时复用现有字段和阻塞规则，避免同一问题重复记录。
+
 ## Huly Evidence Verification
 
 优先读取 R 中已有 Huly References，最多读取少量高相关全文。系统文档可以证明系统环节、规则或原型存在，但不能单独证明用户困难、用户规模、频率或根因。Huly 标题和 Issue 链接不能替代正文证据。
@@ -59,7 +63,7 @@ Finding 保存 ID、Category、中文类别、Severity、Affected Field、Origin
 - `CORRECTED`：只修正非业务问题，修正后无 Blocking。
 - `NEED_HUMAN_CONFIRMATION`：仍有 Blocking Finding。
 
-RR 保存 Evidence Summary、Solution Bias、使用者状态摘要、实用性、用户价值、Findings、Blocking/Non-blocking 数量、Auto Corrections、RRS、分组 Information Gaps、Source Traceability、Fingerprint、时间和 Reviewer Version。
+RR 保存 Evidence Summary、Solution Bias、使用者状态摘要、实用性、用户价值、关键假设核验、Findings、Blocking/Non-blocking 数量、Auto Corrections、RRS、分组 Information Gaps、Source Traceability、Fingerprint、时间和 Reviewer Version。
 
 `PASS/CORRECTED` 只表示可以继续最小 Huly Context Review；本阶段固定 `eligibleForPMRequirementConfirmation=false`，下一阶段为 `HULY_CONTEXT_REVIEW`。只有当前有效 RCR 完成且无阻塞后，才可设置 PM Final Confirmation 就绪。本阶段始终不创建 RC、不触发 Priority。
 
